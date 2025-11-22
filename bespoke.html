@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bespoke Creations</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="logo.jpg" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+</head>
+<body>
+  <div class="wrapper">
+
+   <header class="site-header">
+  <img src="lf1.png" alt="Luxurious Furniture Logo" class="logo">
+  <h1>Luxurious Furniture</h1>
+</header>
+   
+
+    <!-- Hamburger & Side Nav -->
+  <div id="sideNav" class="side-nav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="index.html">Home</a>
+    <a href="living.html">Living</a>
+    <a href="dining.html">Dining</a>
+    <a href="bed.html">Bed</a>
+    <a href="bath.html">Bath</a>
+    <a href="outdoor.html">Outdoor</a>
+    <a href="decor.html">Decor</a>
+    <a href="bespoke.html">Bespoke creations</a>
+  </div>
+
+  <span class="openbtn" onclick="openNav()">&#9776;</span>
+
+    <main>
+      <section class="bespoke-section">
+        <h2>Bespoke Creations</h2>
+        <p>Whether inspired by Pinterest dreams or your own imagination, we turn ideas into handcrafted reality. Our bespoke furniture service brings your vision to life—tailored perfectly to your style, space, and story.</p>
+
+        <a href="https://wa.me/923105683256?text=Hi%2C%20I'm%20interested%20in%20custom%20furniture.%20Can%20you%20help%20me%20design%20something%20special%3F" class="btn">Start Custom Design</a>
+      </section>
+    </main>
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    function openNav() {
+      document.getElementById("sideNav").style.width = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("sideNav").style.width = "0";
+    }
+
+    window.openNav = openNav;
+    window.closeNav = closeNav;
+
+    const sideLinks = document.querySelectorAll(".side-nav a:not(.closebtn)");
+
+    sideLinks.forEach(link => {
+      const linkHref = link.href.split("/").pop();
+      const currentUrl = window.location.href.split("/").pop();
+
+      if (linkHref === currentUrl) {
+        link.classList.add("active");
+      }
+
+      // Optional: close side nav on click
+      link.addEventListener("click", function () {
+        closeNav();
+      });
+    });
+  });
+</script>
+
+
+
+    <footer>
+      <p>&copy; 2025 Luxurious Furniture</p>
+    </footer>
+
+  </div>
+</body>
+</html>

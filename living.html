@@ -1,0 +1,134 @@
+<!-- living.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Living Room</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="logo.jpg" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+</head>
+<body>
+ <header class="site-header">
+  <img src="lf1.png" alt="Luxurious Furniture Logo" class="logo">
+  <h1>Luxurious Furniture</h1>
+</header>
+ 
+
+ <!-- Hamburger & Side Nav -->
+  <div id="sideNav" class="side-nav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="index.html">Home</a>
+    <a href="living.html">Living</a>
+    <a href="dining.html">Dining</a>
+    <a href="bed.html">Bed</a>
+    <a href="bath.html">Bath</a>
+    <a href="outdoor.html">Outdoor</a>
+    <a href="decor.html">Decor</a>
+    <a href="bespoke.html">Bespoke creations</a>
+  </div>
+
+  <span class="openbtn" onclick="openNav()">&#9776;</span>
+
+
+  <main>
+  <section class="living-section">
+    <h2>Living Room Furniture</h2>
+    <p>Curated comfort meets iconic design. Discover living room masterpieces where elegance resides in every curve, and every fabric whispers luxury.</p>
+
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="l1.jpeg" alt="Curved Sofa Set">
+        <h3>Curved Sofa Set</h3>
+        <p>Modern curved sofa with armchairs and chic coffee tables — a contemporary statement piece.</p>
+        <a href="https://wa.me/923105683256?text=Hi%2C%20I'm%20interested%20in%20the%20Curved%20Sofa%20Set." target="_blank" class="view-details-btn">
+          <i class="fa fa-whatsapp"></i> View Details
+        </a>
+      </div>
+
+      <div class="product-card">
+        <img src="l2.jpeg" alt="Bouclé Sofa Ensemble">
+        <h3>Bouclé Sofa Ensemble</h3>
+        <p>Luxurious bouclé sectional with armchair & ottoman — modular elegance for your living room.</p>
+        <a href="https://wa.me/923105683256?text=Hi%2C%20I'm%20interested%20in%20the%20Bouclé%20Sofa%20Ensemble." target="_blank" class="view-details-btn">
+          <i class="fa fa-whatsapp"></i> View Details
+        </a>
+      </div>
+
+      <div class="product-card">
+        <img src="l3.jpeg" alt="Modern Entertainment Lounge">
+        <h3>Modern Entertainment Lounge</h3>
+        <p>Complete media zone: sofa, ottoman, TV cabinet, and pouf — built for comfort and style.</p>
+        <a href="https://wa.me/923105683256?text=Hi%2C%20I'm%20interested%20in%20the%20Modern%20Entertainment%20Lounge." target="_blank" class="view-details-btn">
+          <i class="fa fa-whatsapp"></i> View Details
+        </a>
+      </div>
+
+      <div class="product-card">
+        <img src="l4.jpeg" alt="Urban Luxe Sectional Set">
+        <h3>Urban Luxe Sectional Set</h3>
+        <p>L-shaped grey sectional with bold blue accents — ideal for city apartments & open spaces.</p>
+        <a href="https://wa.me/923105683256?text=Hi%2C%20I'm%20interested%20in%20the%20Urban%20Luxe%20Sectional%20Set." target="_blank" class="view-details-btn">
+          <i class="fa fa-whatsapp"></i> View Details
+        </a>
+      </div>
+
+      <div class="product-card">
+        <img src="l5.jpeg" alt="Contemporary Living Set">
+        <h3>Contemporary Living Set</h3>
+        <p>L-shaped sectional, nesting coffee tables, and sleek storage unit — a modernist's dream.</p>
+        <a href="https://wa.me/923105683256?text=Hi%2C%20I'm%20interested%20in%20the%20Contemporary%20Living%20Set." target="_blank" class="view-details-btn">
+          <i class="fa fa-whatsapp"></i> View Details
+        </a>
+      </div>
+
+      <div class="product-card">
+        <img src="l6.jpeg" alt="Luxury Lounge Suite">
+        <h3>Luxury Lounge Suite</h3>
+        <p>Complete L-shape sectional, square coffee table, & side chairs — sophistication redefined.</p>
+        <a href="https://wa.me/923105683256?text=Hi%2C%20I'm%20interested%20in%20the%20Luxury%20Lounge%20Suite." target="_blank" class="view-details-btn">
+          <i class="fa fa-whatsapp"></i> View Details
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    function openNav() {
+      document.getElementById("sideNav").style.width = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("sideNav").style.width = "0";
+    }
+
+    window.openNav = openNav;
+    window.closeNav = closeNav;
+
+    const sideLinks = document.querySelectorAll(".side-nav a:not(.closebtn)");
+
+    sideLinks.forEach(link => {
+      const linkHref = link.href.split("/").pop();
+      const currentUrl = window.location.href.split("/").pop();
+
+      if (linkHref === currentUrl) {
+        link.classList.add("active");
+      }
+
+      // Optional: close side nav on click
+      link.addEventListener("click", function () {
+        closeNav();
+      });
+    });
+  });
+</script>
+
+
+  <footer><p>&copy; 2025 Luxurious Furniture</p></footer>
+</body>
+</html>

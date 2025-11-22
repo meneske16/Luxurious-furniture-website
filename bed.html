@@ -1,0 +1,140 @@
+<!-- bed.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bedroom</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="logo.jpg" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+</head>
+<body>
+  <header class="site-header">
+  <img src="lf1.png" alt="Luxurious Furniture Logo" class="logo">
+  <h1>Luxurious Furniture</h1>
+</header>
+  
+   <!-- Hamburger & Side Nav -->
+  <div id="sideNav" class="side-nav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="index.html">Home</a>
+    <a href="living.html">Living</a>
+    <a href="dining.html">Dining</a>
+    <a href="bed.html">Bed</a>
+    <a href="bath.html">Bath</a>
+    <a href="outdoor.html">Outdoor</a>
+    <a href="decor.html">Decor</a>
+    <a href="bespoke.html">Bespoke creations</a>
+  </div>
+
+  <span class="openbtn" onclick="openNav()">&#9776;</span>
+
+
+
+  <main> 
+  <section class="bedroom-section">
+    <h2>Bedroom Collection</h2>
+    <p>Retreat into serenity. Each bed and accessory is designed to envelop you in refinement, creating a sanctuary of rest and rejuvenation.</p>
+
+    <div class="product-grid">
+      <!-- Product 1 -->
+      <div class="product-card">
+        <img src="b1.jpeg" alt="Wooden Bed Set">
+        <h3>Wooden Bed Set</h3>
+        <p>Natural wood frame with matching nightstands and LED headboard panels. Elegant beige tones.</p>
+        <a class="view-details-btn" href="https://wa.me/923105683256?text=Hi%2C%20I'm%20interested%20in%20the%20Wooden%20Bed%20Set.%20Please%20share%20more%20details." target="_blank">
+          <i class="fab fa-whatsapp"></i> View Details
+        </a>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product-card">
+        <img src="b2.jpeg" alt="Upholstered Bed Frame">
+        <h3>Upholstered Bed Frame</h3>
+        <p>Luxurious dark velvet bed frame with soft-touch headboard and modern styling.</p>
+        <a class="view-details-btn" href="https://wa.me/923105683256?text=Hi%2C%20I'm%20interested%20in%20the%20Upholstered%20Bed%20Frame.%20Please%20share%20more%20details." target="_blank">
+          <i class="fab fa-whatsapp"></i> View Details
+        </a>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product-card">
+        <img src="b3.jpeg" alt="Modern Bedroom Set">
+        <h3>Modern Bedroom Set</h3>
+        <p>Warm-toned wood with integrated lighting and matching side tables. Sleek and cozy design.</p>
+        <a class="view-details-btn" href="https://wa.me/923105683256?text=Hi%2C%20I'm%20interested%20in%20the%20Modern%20Bedroom%20Set.%20Please%20share%20more%20details." target="_blank">
+          <i class="fab fa-whatsapp"></i> View Details
+        </a>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="product-card">
+        <img src="b4.jpeg" alt="Platform Bed with Bench">
+        <h3>Platform Bed with Bench</h3>
+        <p>Dark wood platform bed with floating nightstands and a beige bench. Stylish & modern.</p>
+        <a class="view-details-btn" href="https://wa.me/923105683256?text=Hi%2C%20I'm%20interested%20in%20the%20Platform%20Bed%20with%20Bench.%20Please%20share%20more%20details." target="_blank">
+          <i class="fab fa-whatsapp"></i> View Details
+        </a>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="product-card">
+        <img src="b5.jpeg" alt="Classic Bed with Storage">
+        <h3>Classic Bed with Storage</h3>
+        <p>Rich brown wood bed with matching headboard and bench. Timeless and elegant design.</p>
+        <a class="view-details-btn" href="https://wa.me/923105683256?text=Hi%2C%20I'm%20interested%20in%20the%20Classic%20Bed%20with%20Storage.%20Please%20share%20more%20details." target="_blank">
+          <i class="fab fa-whatsapp"></i> View Details
+        </a>
+      </div>
+
+      <!-- Product 6 -->
+      <div class="product-card">
+        <img src="b6.jpeg" alt="Suede Platform Bed">
+        <h3>Suede Platform Bed</h3>
+        <p>Beige suede upholstered platform bed — soft, cozy, and minimalistic style.</p>
+        <a class="view-details-btn" href="https://wa.me/923105683256?text=Hi%2C%20I'm%20interested%20in%20the%20Suede%20Platform%20Bed.%20Please%20share%20more%20details." target="_blank">
+          <i class="fab fa-whatsapp"></i> View Details
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    function openNav() {
+      document.getElementById("sideNav").style.width = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("sideNav").style.width = "0";
+    }
+
+    window.openNav = openNav;
+    window.closeNav = closeNav;
+
+    const sideLinks = document.querySelectorAll(".side-nav a:not(.closebtn)");
+
+    sideLinks.forEach(link => {
+      const linkHref = link.href.split("/").pop();
+      const currentUrl = window.location.href.split("/").pop();
+
+      if (linkHref === currentUrl) {
+        link.classList.add("active");
+      }
+
+      // Optional: close side nav on click
+      link.addEventListener("click", function () {
+        closeNav();
+      });
+    });
+  });
+</script>
+
+
+
+
+  <footer><p>&copy; 2025 Luxurious Furniture</p></footer>
+</body>
+</html>

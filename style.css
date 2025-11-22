@@ -1,0 +1,366 @@
+/* IMPORT FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap');
+
+/* GLOBAL RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f7f5f2;
+}
+
+/* Paragraph defaults */
+section p {
+  font-size: 18px;
+  color: #222;
+  margin-bottom: 40px;
+}
+
+/* HEADER */
+header {
+  padding: 40px 20px;
+  background-color: #8b715d;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.site-header .logo {
+  height: 80px;
+  width: auto;
+}
+
+header h1 {
+  font-size: 40px;
+  color: #ffffff;
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+}
+
+/* HAMBURGER MENU (mobile) */
+.menu-icon {
+  display: none;
+  font-size: 28px;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #2e2e2e;
+}
+
+/* NAVIGATION BAR */
+nav {
+  background-color: #2e2e2e;
+  overflow: hidden;
+}
+
+nav a {
+  text-decoration: none;
+  padding: 20px;
+  text-align: center;
+  float: left;
+  color: #f4f4f4;
+  transition: color 0.3s ease;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #c7aa83;
+}
+
+/* MAIN CONTENT */
+main {
+  background-color: #f9f8f5;
+  text-align: center;
+  flex: 1;
+}
+
+/* SECTION STYLING */
+section {
+  padding: 40px 20px;
+}
+
+section:nth-child(even) {
+  background-color: #edeae6;
+}
+
+h2 {
+  padding: 20px;
+  color: #2f2f2f;
+  font-family: 'Playfair Display', serif;
+}
+
+/* PRODUCT GRID */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* PRODUCT CARD */
+.product-card {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 100%;
+}
+
+.product-card .image-container {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.product-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.product-card .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px 12px;
+  flex-grow: 1;
+}
+
+.product-card h3 {
+  font-size: 18px;
+  color: #333;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 8px;
+}
+
+.product-card p {
+  font-size: 14px;
+  color: #666;
+  flex-grow: 1;
+  margin-bottom: 12px;
+}
+
+/* BUTTON */
+.view-details-btn {
+  padding: 10px 18px;
+  background-color: #25D366;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  margin-top: auto;
+}
+
+.view-details-btn:hover {
+  background-color: #1DA851;
+}
+
+/* FOOTER */
+footer {
+  background-color: #2e2e2e;
+  overflow: hidden;
+}
+
+footer a {
+  text-decoration: none;
+  padding: 20px;
+  text-align: center;
+  float: left;
+  color: #fff;
+  font-size: 0.9em;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  background-color: #555;
+}
+
+/* DECOR SECTION */
+.decor-section {
+  background-color: #f7f5f2;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.decor-section h2,
+.signature-section h2,
+.bespoke-section h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+  font-family: 'Playfair Display', serif;
+  color: #3d3d3d;
+}
+
+.bespoke-section,
+.signature-section {
+  background-color: #f8f6f2;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.bespoke-section p {
+  font-size: 18px;
+  color: #000;
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bespoke-section .btn {
+  padding: 12px 24px;
+  background-color: #25D366;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.bespoke-section .btn:hover {
+  background-color: #1DA851;
+}
+
+/* PAGE HEIGHT FIX */
+html, body {
+  height: 100%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 24px;
+    padding: 10px;
+  }
+
+  .site-header {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  nav a {
+    float: none;
+    padding: 15px;
+    border-bottom: 1px solid #444;
+    background-color: #2e2e2e;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-card .image-container {
+    height: 200px;
+  }
+
+  .product-card h3,
+  .product-card p {
+    min-height: auto;
+  }
+}
+
+/* Hamburger Icon */
+.menu-icon {
+  font-size: 28px;
+  padding: 16px;
+  cursor: pointer;
+  display: none;
+  background-color: #2e2e2e;
+  color: #fff;
+  z-index: 1001;
+}
+
+/* Side Navigation */
+.side-nav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  overflow-x: hidden;
+  transition: 0.3s;
+  padding-top: 60px;
+}
+
+.side-nav a {
+  padding: 12px 24px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #333;
+  display: block;
+  transition: 0.3s;
+}
+
+.side-nav a:hover {
+  background-color: #f0f0f0;
+}
+
+.side-nav a.active {
+  color: #8b715d !important;
+  font-weight: bold;
+}
+
+.side-nav .closebtn {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 36px;
+  color: #333;
+  text-decoration: none;
+}
+
+/* Hamburger Button */
+.openbtn {
+  font-size: 26px;
+  cursor: pointer;
+  background-color: transparent;
+  color: #333;
+  padding: 10px 20px;
+  border: none;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 1100;
+}

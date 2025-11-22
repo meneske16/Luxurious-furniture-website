@@ -1,0 +1,140 @@
+
+<!-- outdoor.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Outdoor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="logo.jpg" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+</head>
+<body>
+  <header class="site-header">
+  <img src="lf1.png" alt="Luxurious Furniture Logo" class="logo">
+  <h1>Luxurious Furniture</h1>
+</header>
+ 
+
+   <!-- Hamburger & Side Nav -->
+  <div id="sideNav" class="side-nav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="index.html">Home</a>
+    <a href="living.html">Living</a>
+    <a href="dining.html">Dining</a>
+    <a href="bed.html">Bed</a>
+    <a href="bath.html">Bath</a>
+    <a href="outdoor.html">Outdoor</a>
+    <a href="decor.html">Decor</a>
+    <a href="bespoke.html">Bespoke creations</a>
+  </div>
+
+  <span class="openbtn" onclick="openNav()">&#9776;</span>
+
+
+  <main>
+  <section class="outdoor-section">
+    <h2>Outdoor Living</h2>
+    <p>Bring indoor elegance outdoors — our weatherproof pieces blur boundaries between nature and design.</p>
+
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="o1.jpeg" alt="Rhea Outdoor Lounge Set">
+        <h3>Rhea Outdoor Lounge Set</h3>
+        <p>Charcoal aluminum frame with teak inlays and light grey cushions — the perfect balance of rugged and refined.</p>
+        <a href="https://wa.me/923105683256?text=Hi%2C%20I%27m%20interested%20in%20the%20Rhea%20Outdoor%20Lounge%20Set.%20Could%20you%20please%20share%20more%20details%20and%20pricing%3F"
+           target="_blank" class="view-details-btn">
+          <i class="fa fa-whatsapp"></i> View Details
+        </a>
+      </div>
+
+      <div class="product-card">
+        <img src="o2.jpeg" alt="Wooden Patio Chair Set">
+        <h3>Wooden Patio Chair Set</h3>
+        <p>Teak-finished lounge chairs with off-white cushions — ideal for relaxed patio moments.</p>
+        <a href="https://wa.me/923105683256?text=Hi%2C%20please%20share%20pricing%20and%20details%20for%20your%20Wooden%20Patio%20Chair%20Set."
+           target="_blank" class="view-details-btn">
+          <i class="fa fa-whatsapp"></i> View Details
+        </a>
+      </div>
+
+      <div class="product-card">
+        <img src="o3.jpeg" alt="Rattan Outdoor Sofa Set">
+        <h3>Rattan Outdoor Sofa Set</h3>
+        <p>Woven rattan texture with plush beige cushions — crafted for comfort under open skies.</p>
+        <a href="https://wa.me/923105683256?text=Hi%2C%20can%20you%20provide%20details%20and%20price%20for%20the%20Rattan%20Outdoor%20Sofa%20Set%3F"
+           target="_blank" class="view-details-btn">
+          <i class="fa fa-whatsapp"></i> View Details
+        </a>
+      </div>
+
+      <div class="product-card">
+        <img src="o4.jpeg" alt="Lubek Sectional Set">
+        <h3>Lubek Sectional Set</h3>
+        <p>Slate grey cushions over solid acacia wood — modern outdoor lounging with timeless appeal.</p>
+        <a href="https://wa.me/923105683256?text=Hi%2C%20I'd%20like%20more%20info%20on%20the%20Lubek%20Outdoor%20Sectional%20Set.%20Can%20you%20share%20materials%20and%20price%3F"
+           target="_blank" class="view-details-btn">
+          <i class="fa fa-whatsapp"></i> View Details
+        </a>
+      </div>
+
+      <div class="product-card">
+        <img src="o5.jpeg" alt="Metal Frame Patio Set">
+        <h3>Metal Frame Patio Set</h3>
+        <p>Sleek black metal frame with weatherproof white cushions — durable elegance for any patio.</p>
+        <a href="https://wa.me/923105683256?text=Hi%2C%20I%27m%20interested%20in%20the%20Metal%20Frame%20Patio%20Set.%20Could%20you%20please%20share%20pictures%20and%20price%20range%3F"
+           target="_blank" class="view-details-btn">
+          <i class="fa fa-whatsapp"></i> View Details
+        </a>
+      </div>
+
+      <div class="product-card">
+        <img src="o8.jpeg" alt="Pergola Lounge Set">
+        <h3>Pergola Lounge Set</h3>
+        <p>Wooden pergola paired with a neutral-tone sectional sofa — luxury lounging meets open-air ambiance.</p>
+        <a href="https://wa.me/923105683256?text=Hi%2C%20can%20you%20share%20design%2C%20materials%2C%20and%20price%20for%20the%20Pergola%20Lounge%20Set%3F"
+           target="_blank" class="view-details-btn">
+          <i class="fa fa-whatsapp"></i> View Details
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    function openNav() {
+      document.getElementById("sideNav").style.width = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("sideNav").style.width = "0";
+    }
+
+    window.openNav = openNav;
+    window.closeNav = closeNav;
+
+    const sideLinks = document.querySelectorAll(".side-nav a:not(.closebtn)");
+
+    sideLinks.forEach(link => {
+      const linkHref = link.href.split("/").pop();
+      const currentUrl = window.location.href.split("/").pop();
+
+      if (linkHref === currentUrl) {
+        link.classList.add("active");
+      }
+
+      // Optional: close side nav on click
+      link.addEventListener("click", function () {
+        closeNav();
+      });
+    });
+  });
+</script>
+
+
+  <footer><p>&copy; 2025 Luxurious Furniture</p></footer>
+</body>
+</html>
